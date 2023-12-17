@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("assets/fonts/manrope/Manrope-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("assets/fonts/manrope/static/Manrope-Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* Font Sizes */
+  --fs-400: clamp(0.8594rem, 0.8177rem + 0.2083vw, 1rem);
+  --fs-500: clamp(1.0313rem, 0.9664rem + 0.3241vw, 1.25rem);
+  --fs-600: clamp(1.2375rem, 1.1412rem + 0.4815vw, 1.5625rem);
+  --fs-700: clamp(1.485rem, 1.3463rem + 0.6935vw, 1.9531rem);
+  --fs-800: clamp(1.7819rem, 1.5865rem + 0.9769vw, 2.4413rem);
+  --fs-900: clamp(2.1381rem, 1.8674rem + 1.3537vw, 3.0519rem);
+  --fs-1000: clamp(2.5663rem, 2.1963rem + 1.85vw, 3.815rem);
+  --fs-1100: clamp(3.0794rem, 2.579rem + 2.5019vw, 4.7681rem);
+  --fs-1200: clamp(3.695rem, 3.0237rem + 3.3565vw, 5.9606rem);
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+  --fw-black: 900;
+
+  /* Font Families */
+  --ff-primary-100: "Fraunces", serif;
+  --ff-primary-200: "Manrope", sans-serif;
+
+  /* Colour Palette */
+  --clr-primary-100: hsl(265, 83%, 57%);
+  --clr-primary-200: hsl(210, 100%, 98%);
+  --clr-primary-300: hsl(22, 100%, 54%);
+  --clr-primary-400: hsl(217, 100%, 61%);
+  --clr-primary-500: hsl(238, 87%, 59%);
+  --clr-neutral-100: hsl(0, 0%, 0%);
+  --clr-neutral-200: hsl(0, 0%, 100%);
+
+  /* Spacing */
+  --spacing-xxs: 8px;
+  --spacing-xs: 16px;
+  --spacing-sm: 24px;
+  --spacing-md: 32px;
+  --spacing-lg: 40px;
+  --spacing-xl: 48px;
+  --spacing-2xl: 56px;
+  --spacing-3xl: 64px;
+  --spacing-4xl: 72px;
+  --spacing-5xl: 80px;
+  --spacing-6xl: 88px;
+  --spacing-7xl: 96px;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
