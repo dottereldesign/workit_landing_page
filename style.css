@@ -166,3 +166,8 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+* {
+  font-weight: inherit;
+  font-size: inherit;
+}
