@@ -215,11 +215,34 @@ body {
   background-color: var(--clr-primary-400);
   margin: 0;
 }
+
 @media (min-width: 605px) {
   body::before {
+    content: "";
+    background-image: url("assets/images/bg-pattern-1.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: absolute;
+    top: 60px;
+    overflow: hidden;
+    left: -220px;
+    width: 350px; /* Adjust as necessary */
+    height: 300px;
+    z-index: 100; /* Ensure it's behind other content */
   }
 
   body::after {
+    content: "";
+    background-image: url("assets/images/bg-pattern-2.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    position: absolute; /* or absolute */
+    top: 180px;
+    overflow: hidden;
+    right: -100px;
+    width: 350px; /* Adjust as necessary */
+    height: 300px;
+    z-index: 100; /* Ensure it's behind other content */
   }
 }
 
