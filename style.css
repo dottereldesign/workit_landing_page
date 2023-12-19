@@ -87,6 +87,7 @@
 html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
   text-size-adjust: none;
 }
 
@@ -101,6 +102,7 @@ figure,
 blockquote,
 dl,
 dd {
+  -webkit-margin-after: 0;
   margin-block-end: 0;
 }
 
@@ -137,6 +139,7 @@ h4 {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
+  -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
   color: currentColor;
 }
@@ -444,6 +447,7 @@ h1 {
   .features__item {
     display: grid;
     grid-template-columns: auto 1fr;
+    -moz-column-gap: 24px;
     column-gap: 24px;
     text-align: start;
     margin-top: 36px;
@@ -495,7 +499,7 @@ h1 {
 }
 
 .promo {
-  margin-top: 128px;
+  margin-top: 64px;
   padding: 0 16px;
   display: grid;
   grid-template-columns: 1fr;
@@ -520,11 +524,14 @@ h1 {
   background-color: var(--clr-primary-100);
   padding: 0 24px;
   margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   grid-column: 1;
   grid-row: 2/4;
-
+  position: relative;
   z-index: 4150;
+  overflow: visible;
 }
 
 .promo__title {
@@ -552,7 +559,20 @@ h1 {
     grid-template-columns: 175px 106px 1fr;
     grid-template-rows: 151px 130px 1fr;
     width: min(100%, 750px);
-    margin: 128px auto 0 auto;
+    margin: 70px auto 0 auto;
+  }
+
+  .promo__apply::after {
+    content: "";
+    background-image: url("assets/images/bg-pattern-3.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    position: absolute;
+    bottom: -160px; /* Adjust as needed to extend over the footer */
+    right: 16px;
+    width: 350px;
+    height: 300px; /* Increase if needed to extend further */
+    z-index: 11100; /* Make sure this is higher than the footer's z-index */
   }
 
   .promo img {
@@ -580,7 +600,11 @@ h1 {
     grid-template-columns: 382px 86px 1fr;
     grid-template-rows: 151px 130px 1fr;
     width: min(100%, 1112px);
-    margin: 128px auto 0 auto;
+    margin: 90px auto 0 auto;
+  }
+
+  .promo__apply::after {
+    right: 48px;
   }
 
   .promo__apply {
@@ -597,12 +621,15 @@ h1 {
 
 .footer {
   background-color: var(--clr-primary-500);
-  padding: 128px 0 64px 0;
+  padding: 64px 0 64px 0;
 }
 
 .footer__wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto 0 auto;
+  position: relative;
 }
 
 .footer__logo {
@@ -627,10 +654,12 @@ h1 {
 
 @media (min-width: 605px) {
   .footer {
-    padding-bottom: 96px;
+    padding: 100px 0 100px 0;
   }
 
   .footer__wrapper {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto 0 auto;
   }
