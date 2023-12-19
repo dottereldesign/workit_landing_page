@@ -523,7 +523,7 @@ h1 {
   font-weight: var(--fw-regular);
   text-align: center;
   margin-top: 24px;
-  max-inline-size: 450px;
+  max-inline-size: 650px;
 }
 
 @media (min-width: 605px) {
@@ -546,6 +546,7 @@ h1 {
   .promo__apply {
     grid-column: 2/4;
     grid-row: 2/4;
+    align-items: start;
   }
 
   .promo__description {
@@ -554,6 +555,19 @@ h1 {
 }
 
 @media (min-width: 1142px) {
+  .promo {
+    grid-template-columns: 382px 86px 1fr;
+    grid-template-rows: 151px 130px 1fr;
+    width: min(100%, 1112px);
+    margin: 128px auto 0 auto;
+  }
+
+  .promo__apply {
+    grid-column: 2/4;
+    align-items: start;
+    grid-row: 2/4;
+  }
+
   .promo img {
     width: 477px;
     height: 477px;
