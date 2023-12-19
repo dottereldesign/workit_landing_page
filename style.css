@@ -215,6 +215,13 @@ body {
   background-color: var(--clr-primary-400);
   margin: 0;
 }
+@media (min-width: 605px) {
+  body::before {
+  }
+
+  body::after {
+  }
+}
 
 header {
   display: flex;
@@ -379,8 +386,13 @@ h1 {
     width: min(100%, 1094px);
     display: grid;
     gap: 24px;
+    margin: 200px auto 0 auto;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+  }
+
+  .features__title {
+    margin-top: 36px;
   }
 
   .features__item {
