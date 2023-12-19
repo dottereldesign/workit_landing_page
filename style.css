@@ -238,7 +238,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 16px 128px 16px;
+  padding: 0 16px 138px 16px;
   background-image: url("assets/bg/main-rec.svg");
   background-repeat: no-repeat;
   background-position: bottom;
@@ -302,7 +302,7 @@ header {
 main {
   /* background-color: var(--clr-primary-100); */
 
-  padding-bottom: 128px;
+  padding-bottom: 0;
   background-image: url("assets/bg/main-rec.svg");
   background-repeat: no-repeat;
   background-position: bottom;
@@ -327,7 +327,7 @@ main {
 
 @media (min-width: 605px) {
   main {
-    padding-bottom: 128px;
+    padding-bottom: 50px;
   }
 
   .main::after {
@@ -339,7 +339,7 @@ main {
 
 @media (min-width: 1142px) {
   main {
-    padding-bottom: 128px;
+    padding-bottom: 180px;
   }
 
   .main::after {
