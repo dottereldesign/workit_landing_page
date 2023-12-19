@@ -214,6 +214,7 @@ textarea:not([rows]) {
 body {
   background-color: var(--clr-primary-400);
   margin: 0;
+  overflow-x: hidden;
 }
 
 @media (min-width: 605px) {
@@ -243,6 +244,19 @@ body {
     width: 350px; /* Adjust as necessary */
     height: 300px;
     z-index: 100; /* Ensure it's behind other content */
+  }
+}
+
+@media (min-width: 1142px) {
+  body::before {
+    top: 100px;
+
+    left: -140px;
+  }
+
+  body::after {
+    top: 220px;
+    right: -60px;
   }
 }
 
